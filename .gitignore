@@ -1,0 +1,13 @@
+.vs/
+packages/
+Kickoff/App_Data/
+Kickoff/bin/
+Kickoff/obj/
+Kickoff.Tests/bin/
+Kickoff.Tests/obj/
+Kickoff.Constants/bin/
+Kickoff.Constants/obj/
+Kickoff.Models/bin/
+Kickoff.Models/obj/
+Kickoff.Services/bin/
+Kickoff.Services/obj/
