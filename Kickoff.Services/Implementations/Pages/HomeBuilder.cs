@@ -1,6 +1,8 @@
-﻿using Kickoff.Models.Pages;
+﻿using Kickoff.Constants.Pages;
+using Kickoff.Models.Pages;
 using Kickoff.Services.Definitions.Pages;
 using Umbraco.Core.Models.PublishedContent;
+using Umbraco.Web;
 
 namespace Kickoff.Services.Implementations.Pages
 {
@@ -12,7 +14,9 @@ namespace Kickoff.Services.Implementations.Pages
 
         public HomeModel GetModel(IPublishedContent content)
         {
-            var model = (HomeModel)base.GetModel(content);
+            var model = base.GetModel<HomeModel>(content);
+
+            model.UnderMaintenance = content.Value<bool>(Home.UnderMaintenance);
 
             return model;
         }

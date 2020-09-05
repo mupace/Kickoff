@@ -1,10 +1,7 @@
-﻿using Kickoff.Services.Definitions.Pages;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
+﻿using Kickoff.Models.ContentModels;
+using Kickoff.Services.Definitions.Pages;
 using System.Web.Mvc;
-using Umbraco.Web;
+using Umbraco.Web.Models;
 using Umbraco.Web.Mvc;
 
 namespace Kickoff.Controllers
@@ -19,9 +16,15 @@ namespace Kickoff.Controllers
         }
 
         // GET: Home
-        public ActionResult Index()
+        public ActionResult Index(ContentModel model)
         {
-            return View();
+            var homeContentModel = new HomeContentModel(model.Content);
+
+            var pageModel = _homeBuilder.GetModel(model.Content);
+
+            homeContentModel.PageModel = pageModel;
+            
+            return CurrentTemplate(homeContentModel);
         }
     }
 }

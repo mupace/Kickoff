@@ -2,6 +2,7 @@
 using Kickoff.Services.Definitions.Pages;
 using Kickoff.Services.Implementations.Media;
 using Kickoff.Services.Implementations.Pages;
+using Umbraco.Core;
 using Umbraco.Core.Composing;
 
 namespace Kickoff.Composers
@@ -13,17 +14,17 @@ namespace Kickoff.Composers
 
             #region Service.Definitions.Media
 
-            composition.RegisterFor<IImageBuilder, ImageBuilder>(Lifetime.Singleton);
+            composition.Register<IImageBuilder, ImageBuilder>(Lifetime.Singleton);
 
             #endregion
 
 
             #region Services.Definitions.Pages
 
-            composition.RegisterFor<IHomeBuilder, HomeBuilder>(Lifetime.Singleton);
-            composition.RegisterFor<INavigationBuilder, NavigationBuilder>(Lifetime.Singleton);
-            composition.RegisterFor<ISeoBaseBuilder, SeoBaseBuilder>(Lifetime.Singleton);
-
+            composition.Register<INavigationBuilder, NavigationBuilder>(Lifetime.Singleton);
+            composition.Register<ISeoBaseBuilder, SeoBaseBuilder>(Lifetime.Singleton);
+            composition.Register<IHomeBuilder, HomeBuilder>(Lifetime.Singleton);
+            
             #endregion
         }
     }

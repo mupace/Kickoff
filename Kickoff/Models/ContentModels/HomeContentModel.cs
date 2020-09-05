@@ -1,4 +1,5 @@
-﻿using Umbraco.Core.Models.PublishedContent;
+﻿using Kickoff.Models.Pages;
+using Umbraco.Core.Models.PublishedContent;
 
 namespace Kickoff.Models.ContentModels
 {
@@ -8,6 +9,6 @@ namespace Kickoff.Models.ContentModels
         {
         }
 
-
+        public HomeModel PageModel { get; set; } 
     }
 }

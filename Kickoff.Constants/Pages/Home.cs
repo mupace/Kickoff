@@ -8,5 +8,14 @@ namespace Kickoff.Constants.Pages
     {
         public new const string DocumentTypeAlias = "home";
 
+        #region Navigation
+
+        /// <summary>
+        /// type of: Checkbox
+        /// </summary>
+        public const string UnderMaintenance = "underMaintenance";
+
+        #endregion
+
     }
 }

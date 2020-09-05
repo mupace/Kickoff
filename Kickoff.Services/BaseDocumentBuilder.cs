@@ -6,9 +6,9 @@ namespace Kickoff.Services
 {
     public class BaseDocumentBuilder
     {
-        public virtual T GetModel<T>(IPublishedContent content) where T : BaseDocumentModel
+        public virtual T GetModel<T>(IPublishedContent content) where T : BaseDocumentModel, new()
         {
-            var model = new BaseDocumentModel();
+            var model = new T();
 
             model.Id = content.Id;
 
@@ -20,7 +20,7 @@ namespace Kickoff.Services
 
             model.UniqueKey = content.Key;
 
-            return (T)model;
+            return model;
         }
     }
 }

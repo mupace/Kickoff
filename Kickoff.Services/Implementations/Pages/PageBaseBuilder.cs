@@ -16,16 +16,16 @@ namespace Kickoff.Services.Implementations.Pages
             _seoBaseBuilder = seoBaseBuilder;
         }
 
-        public PageBaseModel GetModel(IPublishedContent content)
+        public T GetModel<T>(IPublishedContent content) where T : PageBaseModel, new()
         {
-            var model = base.GetModel<PageBaseModel>(content);
+            var model = base.GetModel<T>(content);
 
             model.Navigation = _navigationBuilder.GetModel(content);
 
             model.SeoBase = _seoBaseBuilder.GetModel(content);
 
             return model;
-        }
+        } 
 
     }
 }

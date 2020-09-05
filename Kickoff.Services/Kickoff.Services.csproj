@@ -237,10 +237,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BaseDocumentBuilder.cs" />
+    <Compile Include="Definitions\Blocks\IHeaderBuilder.cs" />
     <Compile Include="Definitions\Media\IImageBuilder.cs" />
     <Compile Include="Definitions\Pages\IHomeBuilder.cs" />
     <Compile Include="Definitions\Pages\INavigationBuilder.cs" />
     <Compile Include="Definitions\Pages\ISeoBaseBuilder.cs" />
+    <Compile Include="Implementations\Block\HeaderBuilder.cs" />
     <Compile Include="Implementations\Media\ImageBuilder.cs" />
     <Compile Include="Implementations\Pages\HomeBuilder.cs" />
     <Compile Include="Implementations\Pages\NavigationBuilder.cs" />
