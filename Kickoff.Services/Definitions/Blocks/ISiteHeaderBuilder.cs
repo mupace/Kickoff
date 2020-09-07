@@ -2,8 +2,8 @@
 
 namespace Kickoff.Services.Definitions.Blocks
 {
-    public interface IHeaderBuilder
+    public interface ISiteHeaderBuilder
     {
-        HeaderModel GetModel();
+        SiteHeaderModel GetModel();
     }
 }

@@ -15,8 +15,6 @@ namespace Kickoff.Services.Implementations.Pages
 
             model.HideInHeader = content.Value<bool>(Navigation.HideInHeader);
 
-            model.HideInFooter = content.Value<bool>(Navigation.HideInFooter);
-
             model.HideInBreadcrumb = content.Value<bool>(Navigation.HideInBreadcrumb);
 
             model.HideInSitemap = content.Value<bool>(Navigation.HideInBreadcrumb);

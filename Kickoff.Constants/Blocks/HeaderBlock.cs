@@ -1,5 +1,4 @@
-﻿
-namespace Kickoff.Constants.Blocks
+﻿namespace Kickoff.Constants.Blocks
 {
     /// <summary>
     /// Constants for properties of HeaderBlock doc type
@@ -30,6 +29,6 @@ namespace Kickoff.Constants.Blocks
         /// </summary>
         public const string ImagePosition = "imagePosition";
 
-        #endregion
+        #endregion Content
     }
 }

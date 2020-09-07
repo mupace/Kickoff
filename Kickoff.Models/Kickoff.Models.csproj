@@ -44,16 +44,19 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BaseDocumentModel.cs" />
-    <Compile Include="Block\FooterBlockModel.cs" />
     <Compile Include="Block\HeaderBlockModel.cs" />
-    <Compile Include="Block\HeaderModel.cs" />
+    <Compile Include="Block\SiteFooterModel.cs" />
+    <Compile Include="Block\SiteHeaderModel.cs" />
+    <Compile Include="Common\LinkModel.cs" />
     <Compile Include="Media\ImageModel.cs" />
     <Compile Include="Pages\HomeModel.cs" />
     <Compile Include="Pages\NavigationModel.cs" />
     <Compile Include="Pages\PageBaseModel.cs" />
     <Compile Include="Pages\SeoBaseModel.cs" />
+    <Compile Include="Pages\StandardPageModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Shared\NavigationModel.cs" />
+    <Compile Include="Shared\NavigationItemModel.cs" />
+    <Compile Include="Shared\SiteNavigationModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

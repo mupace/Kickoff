@@ -1,5 +1,4 @@
-﻿
-namespace Kickoff.Constants.Documents
+﻿namespace Kickoff.Constants.Documents
 {
     /// <summary>
     /// Constants for properties of DocumentRoot doc type

@@ -1,5 +1,4 @@
-﻿
-namespace Kickoff.Constants.Pages
+﻿namespace Kickoff.Constants.Pages
 {
     /// <summary>
     /// Constants for properties of Navigation doc type
@@ -12,12 +11,6 @@ namespace Kickoff.Constants.Pages
         /// type of: bool
         /// </summary>
         public const string HideInHeader = "hideInHeader";
-
-
-        /// <summary>
-        /// type of: bool
-        /// </summary>
-        public const string HideInFooter = "hideInFooter";
 
         /// <summary>
         /// type of: bool
@@ -33,6 +26,5 @@ namespace Kickoff.Constants.Pages
         /// type of: bool
         /// </summary>
         public const string HideFromCrawlers = "hideFromCrawlers";
-
     }
 }

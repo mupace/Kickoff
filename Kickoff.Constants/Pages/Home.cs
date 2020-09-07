@@ -1,5 +1,4 @@
-﻿
-namespace Kickoff.Constants.Pages
+﻿namespace Kickoff.Constants.Pages
 {
     /// <summary>
     /// Constants for properties of Home doc type
@@ -15,7 +14,6 @@ namespace Kickoff.Constants.Pages
         /// </summary>
         public const string UnderMaintenance = "underMaintenance";
 
-        #endregion
-
+        #endregion Navigation
     }
 }

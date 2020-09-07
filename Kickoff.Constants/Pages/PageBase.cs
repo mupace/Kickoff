@@ -1,5 +1,4 @@
-﻿
-namespace Kickoff.Constants.Pages
+﻿namespace Kickoff.Constants.Pages
 {
     /// <summary>
     /// Constants for properties of PageBase doc type
@@ -20,6 +19,6 @@ namespace Kickoff.Constants.Pages
         /// </summary>
         public const string Editorial = "editorial";
 
-        #endregion
+        #endregion Content
     }
 }

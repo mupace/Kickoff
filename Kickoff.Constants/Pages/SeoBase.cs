@@ -1,5 +1,4 @@
-﻿
-namespace Kickoff.Constants.Pages
+﻿namespace Kickoff.Constants.Pages
 {
     /// <summary>
     /// Constants for properties of SeoBase doc type

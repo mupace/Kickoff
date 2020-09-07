@@ -1,5 +1,4 @@
-﻿
-namespace Kickoff.Constants.Settings
+﻿namespace Kickoff.Constants.Settings
 {
     /// <summary>
     /// Constants for properties of Setting doc type

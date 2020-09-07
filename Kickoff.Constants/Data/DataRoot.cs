@@ -1,5 +1,4 @@
-﻿
-namespace Kickoff.Constants.Data
+﻿namespace Kickoff.Constants.Data
 {
     /// <summary>
     /// Constants for properties of DataRoot doc type
