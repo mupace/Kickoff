@@ -17,7 +17,7 @@ namespace Kickoff.Services.Implementations.Block
             _umbracoContextFactory = umbracoContextFactory;
         }
 
-        public SiteHeaderModel GetModel()
+        public SiteHeaderModel GetModel(int pageId)
         {
             SiteHeaderModel model = null;
 
@@ -37,7 +37,7 @@ namespace Kickoff.Services.Implementations.Block
                     #region NavigationItems
 
                     var homePage = cref.UmbracoContext.Content.GetByXPath($"//{Home.DocumentTypeAlias}").FirstOrDefault();
-
+                    
                     //Simple nav - do not go to 2nd level
 
                     model.Navigation.NavigationItems.Add(homePage.UmbracoNodeToNavigationItem(PageBase.Title));

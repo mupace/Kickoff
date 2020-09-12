@@ -4,6 +4,6 @@ namespace Kickoff.Services.Definitions.Blocks
 {
     public interface ISiteHeaderBuilder
     {
-        SiteHeaderModel GetModel();
+        SiteHeaderModel GetModel(int pageId);
     }
 }

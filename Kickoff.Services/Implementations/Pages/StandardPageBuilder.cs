@@ -15,6 +15,8 @@ namespace Kickoff.Services.Implementations.Pages
         {
             var model = base.GetModel<StandardPageModel>(content);
 
+            
+
             return model;
         }
     }

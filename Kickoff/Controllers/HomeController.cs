@@ -1,4 +1,5 @@
-﻿using Kickoff.Models.ContentModels;
+﻿using Kickoff.Filters;
+using Kickoff.Models.ContentModels;
 using Kickoff.Services.Definitions.Pages;
 using System.Web.Mvc;
 using Umbraco.Web.Models;
@@ -16,6 +17,7 @@ namespace Kickoff.Controllers
         }
 
         // GET: Home
+        [IsUnderMaintenanceActionFilter]
         public ActionResult Index(ContentModel model)
         {
             var homeContentModel = new HomeContentModel(model.Content);
