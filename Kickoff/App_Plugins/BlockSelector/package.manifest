@@ -1,0 +1,17 @@
+﻿{
+    propertyEditors: [
+        {
+            alias: "My.BlockSelector",
+            name: "Block Selector",
+            isParameterEditor: true,
+            editor: {
+                view: "~/umbraco/views/propertyeditors/contentpicker/contentpicker.html",
+                hideLabel: false,
+                valueType: "STRING"
+            },
+            defaultConfig: {
+                startNode: "1084"
+            },
+        }
+    ]
+}

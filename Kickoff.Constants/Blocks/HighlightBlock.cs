@@ -1,11 +1,11 @@
 ﻿namespace Kickoff.Constants.Blocks
 {
     /// <summary>
-    /// Constants for properties of HeaderBlock doc type
+    /// Constants for properties of Highlight doc type
     /// </summary>
-    public class HeaderBlock
+    public class HighlightBlock
     {
-        public const string DocumentTypeAlias = "headerBlock";
+        public const string DocumentTypeAlias = "highlightBlock";
 
         #region Content
 

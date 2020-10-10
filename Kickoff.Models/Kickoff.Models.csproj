@@ -44,10 +44,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BaseDocumentModel.cs" />
-    <Compile Include="Block\HeaderBlockModel.cs" />
+    <Compile Include="Block\HighlightBlockModel.cs" />
     <Compile Include="Block\SiteFooterModel.cs" />
     <Compile Include="Block\SiteHeaderModel.cs" />
     <Compile Include="Common\LinkModel.cs" />
+    <Compile Include="Media\FileModel.cs" />
     <Compile Include="Media\ImageModel.cs" />
     <Compile Include="Pages\HomeModel.cs" />
     <Compile Include="Pages\NavigationModel.cs" />
@@ -60,6 +61,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Kickoff.Constants\Kickoff.Constants.csproj">
+      <Project>{73256114-40d2-4ae1-ab72-7c04a2632759}</Project>
+      <Name>Kickoff.Constants</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

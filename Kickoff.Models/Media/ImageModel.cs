@@ -3,7 +3,7 @@ namespace Kickoff.Models.Media
 {
     public class ImageModel : BaseDocumentModel
     {
-        //public ImageCropDataSet Image { get; set; }
+        public string CropUrl { get; set; }
 
         public string Url { get; set; }
 

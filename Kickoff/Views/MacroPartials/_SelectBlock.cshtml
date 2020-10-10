@@ -1,0 +1,22 @@
+﻿@using Umbraco.Web.Models
+@using Kickoff.Constants.Blocks
+@inherits Umbraco.Web.Macros.PartialViewMacroPage
+
+@{
+    var blockParam = Model.GetParameterValue<string>("selectBlock");
+    int blockId;
+    /**
+     * In order to add fall-back for previous Block Picker for macro,
+     * I have added these here.
+     */
+
+    if (int.TryParse(blockParam, out blockId))
+    {
+        var content = Umbraco.Content(blockId);
+
+        if (content != null && BlockDocTypes.IncludesType(content.ContentType.Alias))
+        {
+            @Html.Action((string)content.ContentType.Alias, "Block", new { blockContent = content });
+        }
+    }
+}

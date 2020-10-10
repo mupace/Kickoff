@@ -5,10 +5,16 @@ namespace Kickoff.Constants
 {
     public class DropdownValues
     {
-        public static List<string> ImagePositionDropdown = new List<string>
+        public static Dictionary<string, ImagePositionDropdown> ImagePositionMaps = new Dictionary<string, ImagePositionDropdown>
         {
-            "right",
-            "left"
+            { "right", ImagePositionDropdown.Right },
+            {"left", ImagePositionDropdown.Left }
         };
     }
+
+    public enum ImagePositionDropdown 
+    {
+        Right,
+        Left
+    };
 }

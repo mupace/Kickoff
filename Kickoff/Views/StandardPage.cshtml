@@ -1,7 +1,6 @@
 ﻿@using Kickoff.Models.ContentModels
-@using Umbraco.Web.Models
 @inherits Umbraco.Web.Mvc.UmbracoViewPage<StandardPageContentModel>
-@using ContentModels = Umbraco.Web.PublishedModels;
+
 @{
     Layout = "Shared/_Layout.cshtml";
 }
@@ -28,8 +27,6 @@
             <meta name="image" value="@Model.PageModel.SeoBase.SeoImage.Url" />
         }
     }
-
-
 }
 
 

@@ -40,14 +40,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Blocks\BlockDocTypes.cs" />
     <Compile Include="Blocks\BlockRoot.cs" />
-    <Compile Include="Blocks\HeaderBlock.cs" />
+    <Compile Include="Blocks\HighlightBlock.cs" />
     <Compile Include="Blocks\SiteFooter.cs" />
     <Compile Include="Blocks\SiteHeader.cs" />
     <Compile Include="ContentCacheKeys.cs" />
     <Compile Include="Data\DataRoot.cs" />
     <Compile Include="Documents\DocumentRoot.cs" />
     <Compile Include="DropdownValues.cs" />
+    <Compile Include="Media\File.cs" />
+    <Compile Include="Media\Image.cs" />
+    <Compile Include="Media\ImageCropSizes.cs" />
     <Compile Include="Pages\Error404.cs" />
     <Compile Include="Pages\Home.cs" />
     <Compile Include="Pages\Navigation.cs" />

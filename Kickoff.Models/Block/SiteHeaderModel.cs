@@ -11,6 +11,8 @@ namespace Kickoff.Models.Block
 
         public string MenuTitle { get; set; }
 
+        public bool UseHomepageHeader { get; set; }
+
         public SiteNavigationModel Navigation { get; set; }
     }
 }

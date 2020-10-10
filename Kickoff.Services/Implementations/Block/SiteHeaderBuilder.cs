@@ -23,7 +23,7 @@ namespace Kickoff.Services.Implementations.Block
 
             using (var cref = _umbracoContextFactory.EnsureUmbracoContext())
             {
-                var blockRoot = cref.UmbracoContext.ContentCache.GetByXPath($"//{BlockRoot.DocumentTypeAlias}").FirstOrDefault();
+                var blockRoot = cref.UmbracoContext.Content.GetByXPath($"//{BlockRoot.DocumentTypeAlias}").FirstOrDefault();
 
                 if (blockRoot != null)
                 {
@@ -48,7 +48,7 @@ namespace Kickoff.Services.Implementations.Block
 
                     #endregion
 
-                    return model;
+                    model.UseHomepageHeader = homePage.Id == pageId;
                 }
             }
 
