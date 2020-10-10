@@ -417,6 +417,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="App_Data\MailDrop\" />
     <Folder Include="Views\Home\" />
     <Folder Include="Views\StandardPage\" />
   </ItemGroup>

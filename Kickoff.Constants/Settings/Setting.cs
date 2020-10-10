@@ -10,21 +10,11 @@
         /// <summary>
         /// type of: Textbox
         /// </summary>
-        public const string Title = "title";
+        public const string Key = "key";
 
         /// <summary>
-        /// type of: Richtext Editor
+        /// type of: Textbox
         /// </summary>
-        public const string Content = "content";
-
-        /// <summary>
-        /// type of: Image picker - single
-        /// </summary>
-        public const string Image = "image";
-
-        /// <summary>
-        /// type of: Image Position Dropdown
-        /// </summary>
-        public const string ImagePosition = "imagePosition";
+        public const string Value = "value";
     }
 }

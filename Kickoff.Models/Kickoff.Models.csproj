@@ -48,6 +48,7 @@
     <Compile Include="Block\SiteFooterModel.cs" />
     <Compile Include="Block\SiteHeaderModel.cs" />
     <Compile Include="Common\LinkModel.cs" />
+    <Compile Include="Common\SettingModel.cs" />
     <Compile Include="Media\FileModel.cs" />
     <Compile Include="Media\ImageModel.cs" />
     <Compile Include="Pages\HomeModel.cs" />

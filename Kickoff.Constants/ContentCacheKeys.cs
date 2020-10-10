@@ -13,9 +13,12 @@ namespace Kickoff.Constants
 
         public const string NavigationCacheKey = "Navigation_Cache_Key";
 
+        public const string SettingCacheKey = "Setting_Cache_Key";
+
         public static readonly List<CacheKeyInformation> AffectList = new List<CacheKeyInformation>()
         {
-            new CacheKeyInformation(NavigationCacheKey, new List<string>(){Home.DocumentTypeAlias })
+            new CacheKeyInformation(NavigationCacheKey, new List<string>(){ Home.DocumentTypeAlias }),
+            new CacheKeyInformation(SettingCacheKey, new List<string>(){ Setting.DocumentTypeAlias })
         };
     }
 

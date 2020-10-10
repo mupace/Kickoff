@@ -241,6 +241,8 @@
     <Compile Include="Definitions\Blocks\ISiteFooterBuilder.cs" />
     <Compile Include="Definitions\Blocks\ISiteHeaderBuilder.cs" />
     <Compile Include="Definitions\Cache\IMemoryCacheService.cs" />
+    <Compile Include="Definitions\ISettingHelper.cs" />
+    <Compile Include="Definitions\ISMTPHelper.cs" />
     <Compile Include="Definitions\Media\IFileBuilder.cs" />
     <Compile Include="Definitions\Media\IImageBuilder.cs" />
     <Compile Include="Definitions\Pages\IHomeBuilder.cs" />
@@ -260,6 +262,8 @@
     <Compile Include="Implementations\Pages\PageBaseBuilder.cs" />
     <Compile Include="Implementations\Pages\SeoBaseBuilder.cs" />
     <Compile Include="Implementations\Pages\StandardPageBuilder.cs" />
+    <Compile Include="Implementations\SettingHelper.cs" />
+    <Compile Include="Implementations\SMTPHelper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
