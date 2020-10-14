@@ -1,0 +1,28 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoViewPage
+@{
+    Layout = "Shared/_Layout.cshtml";
+}
+
+
+@section SeoInfo{
+    <title>@(Model.Value<string>("title"))</title>
+
+    @if (Model.HasValue("seoDescription"))
+    {
+        <meta name="description" value="@(Model.Value<string>("seoDescription"))" />
+    }
+
+    @if (Model.HasValue("seoKeywords"))
+    {
+        <meta name="description" value="@(string.Join(",", Model.Value<string[]>("seoKeywords")))" />
+    }
+
+    @if (Model.HasValue("seoImage"))
+    {
+        <meta name="image" value="@(Model.Value<IPublishedContent>("seoImage").Url)" />
+    }
+
+}
+
+
+@Html.GetGridHtml(Model, "editorial")

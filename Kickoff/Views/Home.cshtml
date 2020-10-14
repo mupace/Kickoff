@@ -6,25 +6,15 @@
     Layout = "Shared/_Layout.cshtml";
 }
 
-@*@{ 
-    <style>
-        footer{
-            width: 100%;
-            position: absolute;
-            bottom: 0;
-        }
-    </style>
-}*@
-
 @section SeoInfo{
-    <title>@Model.PageModel.Title</title>
-
-
     @if (Model.PageModel.SeoBase != null)
     {
+        <title>@Model.PageModel.SeoBase.SeoTitle</title>
+
         if (!string.IsNullOrEmpty(Model.PageModel.SeoBase.SeoDescription))
         {
             <meta name="description" value="@Model.PageModel.SeoBase.SeoDescription" />
+            <meta name="og:description" value="@Model.PageModel.SeoBase.SeoDescription" />
         }
 
         if (Model.PageModel.SeoBase.SeoKeywords != null && Model.PageModel.SeoBase.SeoKeywords.Any())
@@ -32,40 +22,42 @@
             <meta name="keywords" value="@string.Join(",", Model.PageModel.SeoBase.SeoKeywords)" />
         }
 
+        <meta name="og:title" value="@Model.PageModel.SeoBase.SeoTitle" />
 
         if (Model.PageModel.SeoBase.SeoImage != null)
         {
-            <meta name="image" value="@Model.PageModel.SeoBase.SeoImage.Url" />
+            <meta name="og:image" value="@Model.PageModel.SeoBase.SeoImage.Url" />
         }
     }
-
-
+    else
+    {
+        <title>@Model.PageModel.Title</title>
+    }
 }
-
 
 @Html.GetGridHtml(Model, Kickoff.Constants.Pages.Home.Editorial)
 
 @*<section class="content-section bg-light" id="about">
-    <div class="container text-center">
-        <div class="row">
-            <div class="col-lg-10 mx-auto">
-                <h2>Stylish Portfolio is the perfect theme for your next project!</h2>
-                <p class="lead mb-5">
-                    This theme features a flexible, UX friendly sidebar menu and stock photos from our friends at
-                    <a href="https://unsplash.com/">Unsplash</a>!
-                </p>
-                <a class="btn btn-dark btn-xl js-scroll-trigger" href="#services">What We Offer</a>
+        <div class="container text-center">
+            <div class="row">
+                <div class="col-lg-10 mx-auto">
+                    <h2>Stylish Portfolio is the perfect theme for your next project!</h2>
+                    <p class="lead mb-5">
+                        This theme features a flexible, UX friendly sidebar menu and stock photos from our friends at
+                        <a href="https://unsplash.com/">Unsplash</a>!
+                    </p>
+                    <a class="btn btn-dark btn-xl js-scroll-trigger" href="#services">What We Offer</a>
+                </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
-<section class="content-section bg-primary" id="about">
-    <div class="container text-center">
-        <div class="row">
-            <div class="col-lg-10 mx-auto">
+    <section class="content-section bg-primary" id="about">
+        <div class="container text-center">
+            <div class="row">
+                <div class="col-lg-10 mx-auto">
 
+                </div>
             </div>
         </div>
-    </div>
-</section>*@
+    </section>*@

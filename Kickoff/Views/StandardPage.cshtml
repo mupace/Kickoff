@@ -6,14 +6,14 @@
 }
 
 @section SeoInfo{
-    <title>@Model.PageModel.Title</title>
-
-
     @if (Model.PageModel.SeoBase != null)
     {
+        <title>@Model.PageModel.SeoBase.SeoTitle</title>
+
         if (!string.IsNullOrEmpty(Model.PageModel.SeoBase.SeoDescription))
         {
             <meta name="description" value="@Model.PageModel.SeoBase.SeoDescription" />
+            <meta name="og:description" value="@Model.PageModel.SeoBase.SeoDescription" />
         }
 
         if (Model.PageModel.SeoBase.SeoKeywords != null && Model.PageModel.SeoBase.SeoKeywords.Any())
@@ -21,11 +21,16 @@
             <meta name="keywords" value="@string.Join(",", Model.PageModel.SeoBase.SeoKeywords)" />
         }
 
+        <meta name="og:title" value="@Model.PageModel.SeoBase.SeoTitle" />
 
         if (Model.PageModel.SeoBase.SeoImage != null)
         {
-            <meta name="image" value="@Model.PageModel.SeoBase.SeoImage.Url" />
+            <meta name="og:image" value="@Model.PageModel.SeoBase.SeoImage.Url" />
         }
+    }
+    else
+    {
+        <title>@Model.PageModel.Title</title>
     }
 }
 
