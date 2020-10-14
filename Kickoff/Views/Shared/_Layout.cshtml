@@ -34,7 +34,7 @@
     <div>
         @RenderBody()
     </div>
-    @Html.Action("Footer", "Block")
+    @Html.Action("Footer", "Block", new { currentPage = Model.Content })
 
 
     <!-- Scroll to Top Button-->

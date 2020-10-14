@@ -1,5 +1,10 @@
 ﻿@model Kickoff.Models.Block.SiteFooterModel
-<footer class="footer text-center">
+
+@{ 
+    var footerCssClass = Model.UseHomepageStyle ? "absoluteFooter" : string.Empty;
+}
+
+<footer class="footer text-center @footerCssClass">
     <div class="container">
         <ul class="list-inline mb-5">
             <li class="list-inline-item">

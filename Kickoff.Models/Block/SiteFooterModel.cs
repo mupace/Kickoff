@@ -16,5 +16,7 @@ namespace Kickoff.Models.Block
         public string GithubUrl { get; set; }
 
         public string CopyrightText { get; set; }
+
+        public bool UseHomepageStyle { get; set; }
     }
 }

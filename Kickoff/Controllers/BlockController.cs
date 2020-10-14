@@ -62,9 +62,9 @@ namespace Kickoff.Controllers
             return PartialView("_Header", model);
         }
 
-        public ActionResult Footer()
+        public ActionResult Footer(IPublishedContent currentPage)
         {
-            var model = FooterBuilder.GetModel();
+            var model = FooterBuilder.GetModel(currentPage);
 
             return PartialView("_Footer", model);
         }

@@ -18,13 +18,13 @@ namespace Kickoff.Services.Implementations.Block
             _umbracoContextFactory = umbracoContextFactory;
         }
 
-        public SiteFooterModel GetModel()
+        public SiteFooterModel GetModel(IPublishedContent currentPage)
         {
             SiteFooterModel model = null;
 
             using (var cref = _umbracoContextFactory.EnsureUmbracoContext())
             {
-                var blockRoot = cref.UmbracoContext.ContentCache.GetByXPath($"//{BlockRoot.DocumentTypeAlias}").FirstOrDefault();
+                var blockRoot = cref.UmbracoContext.Content.GetByXPath($"//{BlockRoot.DocumentTypeAlias}").FirstOrDefault();
 
                 if (blockRoot != null)
                 {
@@ -43,6 +43,8 @@ namespace Kickoff.Services.Implementations.Block
                     model.GithubUrl = footerNode.Value<string>(SiteFooter.GithubUrl);
 
                     model.CopyrightText = footerNode.Value<string>(SiteFooter.CopyrightText);
+
+                    model.UseHomepageStyle = currentPage.AncestorOrSelf(1).Id == currentPage.Id;
 
                     return model;
                 }

@@ -1,14 +1,10 @@
 ﻿using Kickoff.Models.Block;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using Umbraco.Core.Models.PublishedContent;
 
 namespace Kickoff.Services.Definitions.Blocks
 {
     public interface ISiteFooterBuilder
     {
-        SiteFooterModel GetModel();
+        SiteFooterModel GetModel(IPublishedContent currentPage);
     }
 }
