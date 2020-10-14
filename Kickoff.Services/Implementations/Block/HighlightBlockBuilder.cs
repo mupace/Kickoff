@@ -29,12 +29,7 @@ namespace Kickoff.Services.Implementations.Block
 
             if(content.HasValue(HighlightBlock.Image))
             {
-                var imageProp = content.Value<IPublishedContent>(HighlightBlock.Image);
-
-                model.Image = _imageBuilder.GetModel(imageProp);
-
-                if (model.Image != null)
-                    model.Image.CropUrl = imageProp.GetCropUrl(ImageCropSizes.HighlightBlockCrop);
+                model.Image = _imageBuilder.GetModel(content.Value<IPublishedContent>(HighlightBlock.Image), ImageCropSizes.HighlightBlockCrop);
             }
 
             model.ImagePosition = content.Value<string>(HighlightBlock.ImagePosition);

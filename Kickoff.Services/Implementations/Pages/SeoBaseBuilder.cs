@@ -1,4 +1,5 @@
-﻿using Kickoff.Constants.Pages;
+﻿using Kickoff.Constants.Media;
+using Kickoff.Constants.Pages;
 using Kickoff.Models.Pages;
 using Kickoff.Services.Definitions.Media;
 using Kickoff.Services.Definitions.Pages;
@@ -28,7 +29,7 @@ namespace Kickoff.Services.Implementations.Pages
 
             if (content.HasValue(SeoBase.SeoImage))
             {
-                model.SeoImage = _imageBuilder.GetModel(content.Value<IPublishedContent>(SeoBase.SeoImage));
+                model.SeoImage = _imageBuilder.GetModel(content.Value<IPublishedContent>(SeoBase.SeoImage), ImageCropSizes.SeoCrop);
             }
 
             return model;

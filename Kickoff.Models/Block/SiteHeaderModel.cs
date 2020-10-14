@@ -1,4 +1,5 @@
-﻿using Kickoff.Models.Shared;
+﻿using Kickoff.Models.Media;
+using Kickoff.Models.Shared;
 
 namespace Kickoff.Models.Block
 {
@@ -12,6 +13,12 @@ namespace Kickoff.Models.Block
         public string MenuTitle { get; set; }
 
         public bool UseHomepageHeader { get; set; }
+
+        public string HeaderText { get; set; }
+
+        public string SubText { get; set; }
+
+        public ImageModel BannerImage { get; set; }
 
         public SiteNavigationModel Navigation { get; set; }
     }

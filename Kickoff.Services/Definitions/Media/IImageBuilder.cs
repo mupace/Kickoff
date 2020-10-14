@@ -5,6 +5,6 @@ namespace Kickoff.Services.Definitions.Media
 {
     public interface IImageBuilder
     {
-        ImageModel GetModel(IPublishedContent content);
+        ImageModel GetModel(IPublishedContent content, string cropSize);
     }
 }

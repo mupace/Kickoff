@@ -1,5 +1,6 @@
 ﻿using Kickoff.Constants.Pages;
 using Kickoff.Models.Pages;
+using Kickoff.Services.Definitions.Media;
 using Kickoff.Services.Definitions.Pages;
 using Umbraco.Core.Models.PublishedContent;
 using Umbraco.Web;

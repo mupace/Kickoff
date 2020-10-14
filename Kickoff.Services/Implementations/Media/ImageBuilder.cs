@@ -8,7 +8,7 @@ namespace Kickoff.Services.Implementations.Media
 {
     public class ImageBuilder : BaseDocumentBuilder, IImageBuilder
     {
-        public ImageModel GetModel(IPublishedContent content)
+        public ImageModel GetModel(IPublishedContent content, string cropSize)
         {
             var model = base.GetModel<ImageModel>(content);
 
@@ -23,6 +23,8 @@ namespace Kickoff.Services.Implementations.Media
             model.Size = content.Value<int>(Image.UmbracoBytes);
 
             model.Url = content.Url;
+
+            model.CropUrl = string.IsNullOrEmpty(cropSize) ? model.Url : content.GetCropUrl(cropSize);
 
             return model;
         }

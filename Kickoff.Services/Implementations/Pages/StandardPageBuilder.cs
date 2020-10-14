@@ -1,4 +1,5 @@
 ﻿using Kickoff.Models.Pages;
+using Kickoff.Services.Definitions.Media;
 using Kickoff.Services.Definitions.Pages;
 using System;
 using Umbraco.Core.Models.PublishedContent;

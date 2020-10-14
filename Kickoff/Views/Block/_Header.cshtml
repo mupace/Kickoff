@@ -1,4 +1,28 @@
 ﻿@model Kickoff.Models.Block.SiteHeaderModel
+
+@{ 
+    if (Model.BannerImage != null)
+    {
+        <style>
+            .masthead{
+                background-image: "";
+            }
+            .banner {
+                background-image: url(@(Model.BannerImage.CropUrl)) !important; 
+            }
+        </style>
+    }
+
+    if (!Model.UseHomepageHeader)
+    {
+        <style>
+            .banner{
+                height: 15vh;
+            }
+        </style>
+    }
+}
+
 <!-- Navigation -->
 <a class="menu-toggle rounded" href="#">
     <i class="fas fa-bars"></i>
@@ -24,25 +48,32 @@
 <!-- Header -->
 @if (Model.UseHomepageHeader)
 {
-    <header class="masthead d-flex">
+    <header class="masthead d-flex banner">
         <div class="container text-center my-auto">
-            <h1 class="mb-1">Portfolio</h1>
-            <h3 class="mb-5">
-                <em>A Sample Umbraco Site</em>
-            </h3>
-            <a class="btn btn-primary btn-xl js-scroll-trigger" href="#about">Find Out More</a>
+            <h1 class="mb-1">@Model.HeaderText</h1>
+            @if (!string.IsNullOrEmpty(Model.SubText))
+            {
+                <h3 class="mb-5">
+                    <em>@Model.SubText</em>
+                </h3>
+            }
+
+            <a class="btn btn-primary btn-xl js-scroll-trigger" href="#about">About</a>
         </div>
         <div class="overlay"></div>
     </header>
 }
 else
 {
-    <header class="d-flex">
+    <header class="d-flex banner">
         <div class="container text-center my-auto">
-            <h1 class="mb-1">Portfolio</h1>
-            <h3 class="mb-5">
-                <em>A Sample Umbraco Site</em>
-            </h3>
+            <h1 class="mb-1">@Model.HeaderText</h1>
+            @if (!string.IsNullOrEmpty(Model.SubText))
+            {
+                <h3 class="mb-5">
+                    <em>@Model.SubText</em>
+                </h3>
+            }
         </div>
         <div class="overlay"></div>
     </header>

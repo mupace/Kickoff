@@ -55,9 +55,9 @@ namespace Kickoff.Controllers
         }
 
         // GET: Block
-        public ActionResult Header(int pageId)
+        public ActionResult Header(IPublishedContent currentPage)
         {
-            var model = HeaderBuilder.GetModel(pageId);
+            var model = HeaderBuilder.GetModel(currentPage);
 
             return PartialView("_Header", model);
         }

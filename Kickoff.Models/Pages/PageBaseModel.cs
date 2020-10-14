@@ -1,4 +1,5 @@
-﻿using Newtonsoft.Json.Linq;
+﻿using Kickoff.Models.Media;
+using Newtonsoft.Json.Linq;
 
 namespace Kickoff.Models.Pages
 {
