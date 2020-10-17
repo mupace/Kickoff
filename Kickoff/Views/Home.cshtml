@@ -35,7 +35,11 @@
     }
 }
 
-@Html.GetGridHtml(Model, Kickoff.Constants.Pages.Home.Editorial)
+@if (Model.HasValue(Kickoff.Constants.Pages.Home.Editorial))
+{
+    @:@Html.GetGridHtml(Model, Kickoff.Constants.Pages.Home.Editorial)
+}
+
 
 @*<section class="content-section bg-light" id="about">
         <div class="container text-center">

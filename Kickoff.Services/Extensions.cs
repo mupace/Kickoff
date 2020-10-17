@@ -16,15 +16,20 @@ namespace Kickoff.Services
                 return null;
 
             return links
-                    .Select(x => new LinkModel()
-                    {
-                        Name = x.Name,
-                        LinkType = (int)x.Type,
-                        Target = x.Target,
-                        Udi = x.Udi.ToString(),
-                        Url = x.Url
-                    })
+                    .Select(x => x.UmbracoLinkToLinkModel())
                     .ToList();
+        }
+
+        public static LinkModel UmbracoLinkToLinkModel(this Link link)
+        {
+            return new LinkModel()
+            {
+                Name = link.Name,
+                LinkType = (int)link.Type,
+                Target = link.Target,
+                Udi = link.Udi.ToString(),
+                Url = link.Url
+            };
         }
 
         public static NavigationItemModel UmbracoNodeToNavigationItem(this IPublishedContent page, string titlePropertyAlias)

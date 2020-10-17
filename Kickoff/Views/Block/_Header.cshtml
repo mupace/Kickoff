@@ -18,6 +18,7 @@
         <style>
             .banner{
                 height: 15vh;
+                margin-bottom: 5vh;
             }
         </style>
     }
@@ -58,7 +59,10 @@
                 </h3>
             }
 
-            <a class="btn btn-primary btn-xl js-scroll-trigger" href="#about">About</a>
+            @if (Model.BannerCTA != null)
+            {
+                <a class="btn btn-primary btn-xl js-scroll-trigger" href="@(Model.BannerCTA.Url)">@Model.BannerCTA.Name</a>
+            }
         </div>
         <div class="overlay"></div>
     </header>

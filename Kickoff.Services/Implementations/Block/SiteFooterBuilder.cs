@@ -40,6 +40,8 @@ namespace Kickoff.Services.Implementations.Block
 
                     model.TwitterUrl = footerNode.Value<string>(SiteFooter.TwitterUrl);
 
+                    model.LinkedinUrl = footerNode.Value<string>(SiteFooter.LinkedinUrl);
+
                     model.GithubUrl = footerNode.Value<string>(SiteFooter.GithubUrl);
 
                     model.CopyrightText = footerNode.Value<string>(SiteFooter.CopyrightText);

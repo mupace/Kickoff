@@ -7,6 +7,15 @@
     {
         public new const string DocumentTypeAlias = "home";
 
+        #region Content
+
+        /// <summary>
+        /// type of: Multi Url picker - Single
+        /// </summary>
+        public const string BannerCTA = "bannerCTA";
+
+        #endregion
+
         #region Navigation
 
         /// <summary>

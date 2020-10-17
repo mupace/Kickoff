@@ -27,6 +27,11 @@
         /// <summary>
         /// type of: Textbox
         /// </summary>
+        public const string LinkedinUrl = "linkedinUrl";
+
+        /// <summary>
+        /// type of: Textbox
+        /// </summary>
         public const string GithubUrl = "githubUrl";
 
         /// <summary>

@@ -1,4 +1,5 @@
-﻿using Kickoff.Models.Media;
+﻿using Kickoff.Models.Common;
+using Kickoff.Models.Media;
 using Kickoff.Models.Shared;
 
 namespace Kickoff.Models.Block
@@ -19,6 +20,8 @@ namespace Kickoff.Models.Block
         public string SubText { get; set; }
 
         public ImageModel BannerImage { get; set; }
+
+        public LinkModel BannerCTA { get; set; }
 
         public SiteNavigationModel Navigation { get; set; }
     }

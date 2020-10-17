@@ -7,6 +7,7 @@ using Kickoff.Services.Definitions.Media;
 using System.Linq;
 using Umbraco.Core.Models.PublishedContent;
 using Umbraco.Web;
+using Umbraco.Web.Models;
 
 namespace Kickoff.Services.Implementations.Block
 {
@@ -66,6 +67,11 @@ namespace Kickoff.Services.Implementations.Block
                         var cropSize = model.UseHomepageHeader ? ImageCropSizes.HomepageBannerCrop : ImageCropSizes.PageBannerCrop;
 
                         model.BannerImage = _imageBuilder.GetModel(currentPage.Value<IPublishedContent>(PageBase.BannerImage), cropSize);
+                    }
+
+                    if (currentPage.HasProperty(Home.BannerCTA))
+                    {
+                        model.BannerCTA = currentPage.Value<Link>(Home.BannerCTA)?.UmbracoLinkToLinkModel();
                     }
 
                     #endregion HeaderInfo

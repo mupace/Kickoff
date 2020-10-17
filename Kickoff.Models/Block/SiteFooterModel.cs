@@ -13,6 +13,8 @@ namespace Kickoff.Models.Block
 
         public string TwitterUrl { get; set; }
 
+        public string LinkedinUrl { get; set; }
+
         public string GithubUrl { get; set; }
 
         public string CopyrightText { get; set; }
