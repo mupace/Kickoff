@@ -29,6 +29,11 @@
         /// </summary>
         public const string ImagePosition = "imagePosition";
 
+        /// <summary>
+        /// type of: Image Border Option Dropdown
+        /// </summary>
+        public const string BorderStyle = "borderStyle";
+
         #endregion Content
     }
 }

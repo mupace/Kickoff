@@ -3,24 +3,15 @@
 @{ 
     if (Model.BannerImage != null)
     {
-        <style>
+    <style>
             .masthead{
-                background-image: "";
+                background-image: url( @(Model.BannerImage.CropUrl) ) !important;
             }
-            .banner {
-                background-image: url(@(Model.BannerImage.CropUrl)) !important; 
-            }
-        </style>
-    }
 
-    if (!Model.UseHomepageHeader)
-    {
-        <style>
-            .banner{
-                height: 15vh;
-                margin-bottom: 5vh;
-            }
-        </style>
+        .innerPageBanner {
+            background-image: url( @(Model.BannerImage.CropUrl) ) !important;
+        }
+    </style>
     }
 }
 
@@ -49,7 +40,7 @@
 <!-- Header -->
 @if (Model.UseHomepageHeader)
 {
-    <header class="masthead d-flex banner">
+    <header class="masthead d-flex">
         <div class="container text-center my-auto">
             <h1 class="mb-1">@Model.HeaderText</h1>
             @if (!string.IsNullOrEmpty(Model.SubText))
@@ -69,7 +60,7 @@
 }
 else
 {
-    <header class="d-flex banner">
+    <header class="d-flex innerPageBanner">
         <div class="container text-center my-auto">
             <h1 class="mb-1">@Model.HeaderText</h1>
             @if (!string.IsNullOrEmpty(Model.SubText))

@@ -2,7 +2,11 @@
 @inherits UmbracoViewPage<Kickoff.Models.Block.HighlightBlockModel>
 
 @{
-    var textSizeCss = Model.HasImage ? "col-md-9 col-xs-12" : "col-md-12 col-xs-12";
+    var textWidthCss = Model.HasImage ? "col-md-9 col-xs-12" : "col-md-12 col-xs-12";
+
+    var imageCss = Model.HasImage && Model.ImageBorderOptionEnum == ImageBorderOptions.Circle ? "imgCircleBorder" : string.Empty;
+
+
 }
 
 <section>
@@ -14,17 +18,17 @@
         {
             if (Model.ImagePositionEnum == ImagePositionDropdown.Left)
             {
-                <div class="col-md-3 col-xs-12">
-                    <img src="@Model.Image.Url" alt="@Model.Image.Alt" title="@Model.Image.Title" />
+                <div class="col-md-3 col-xs-12" style="height:100%">
+                    <img class="@imageCss" src="@Model.Image.Url" alt="@Model.Image.Alt" title="@Model.Image.Title" />
                 </div>
             }
 
-            <div class="@textSizeCss">@Html.Raw(Model.Content)</div>
+            <div class="@textWidthCss">@Html.Raw(Model.Content)</div>
 
             if (Model.ImagePositionEnum == ImagePositionDropdown.Right)
             {
                 <div class="col-md-3 col-xs-12">
-                    <img src="@Model.Image.CropUrl" alt="@Model.Image.Alt" title="@Model.Image.Title" />
+                    <img class="@imageCss" src="@Model.Image.CropUrl" alt="@Model.Image.Alt" title="@Model.Image.Title" />
                 </div>
             }
 

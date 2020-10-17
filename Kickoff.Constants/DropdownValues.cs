@@ -7,8 +7,14 @@ namespace Kickoff.Constants
     {
         public static Dictionary<string, ImagePositionDropdown> ImagePositionMaps = new Dictionary<string, ImagePositionDropdown>
         {
-            { "right", ImagePositionDropdown.Right },
-            {"left", ImagePositionDropdown.Left }
+            { "Right", ImagePositionDropdown.Right },
+            { "Left", ImagePositionDropdown.Left }
+        };
+
+        public static Dictionary<string, ImageBorderOptions> ImageBorderMaps = new Dictionary<string, ImageBorderOptions>
+        {
+            { "Box", ImageBorderOptions.Box },
+            { "Circle", ImageBorderOptions.Circle }
         };
     }
 
@@ -17,4 +23,10 @@ namespace Kickoff.Constants
         Right,
         Left
     };
+
+    public enum ImageBorderOptions
+    {
+        Box,
+        Circle
+    }
 }

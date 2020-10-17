@@ -26,7 +26,6 @@ namespace Kickoff.Services.Implementations.Block
 
             model.Content = content.Value<string>(HighlightBlock.Content);
 
-
             if(content.HasValue(HighlightBlock.Image))
             {
                 model.Image = _imageBuilder.GetModel(content.Value<IPublishedContent>(HighlightBlock.Image), ImageCropSizes.HighlightBlockCrop);
@@ -34,10 +33,7 @@ namespace Kickoff.Services.Implementations.Block
 
             model.ImagePosition = content.Value<string>(HighlightBlock.ImagePosition);
 
-            if (model.HasImage && !string.IsNullOrEmpty(model.ImagePosition) && DropdownValues.ImagePositionMaps.ContainsKey(model.ImagePosition))
-            {
-                model.ImagePositionEnum = DropdownValues.ImagePositionMaps[model.ImagePosition];
-            }
+            model.ImageBorderOption = content.Value<string>(HighlightBlock.BorderStyle);
 
             return model;
         }
