@@ -1,10 +1,12 @@
-﻿using Kickoff.Services.Definitions.Blocks;
+﻿using Kickoff.ActionFilters;
+using Kickoff.Services.Definitions.Blocks;
 using System.Web.Mvc;
 using Umbraco.Core.Models.PublishedContent;
 using Umbraco.Web.Mvc;
 
 namespace Kickoff.Controllers
 {
+    [HandleBlockError]
     public class BlockController : SurfaceController
     {
         #region Fields
@@ -48,13 +50,26 @@ namespace Kickoff.Controllers
             }
         }
 
+        private ICTABlockBuilder _ctaBlockBuilder;
+
+        private ICTABlockBuilder CTABlockBuilder
+        {
+            get
+            {
+                if (_ctaBlockBuilder == null)
+                    _ctaBlockBuilder = DependencyResolver.Current.GetService<ICTABlockBuilder>();
+
+                return _ctaBlockBuilder;
+            }
+        }
+
         #endregion Builder Injection
 
         public BlockController()
         {
         }
 
-        // GET: Block
+        [ChildActionOnly]
         public ActionResult Header(IPublishedContent currentPage)
         {
             var model = HeaderBuilder.GetModel(currentPage);
@@ -62,6 +77,7 @@ namespace Kickoff.Controllers
             return PartialView("_Header", model);
         }
 
+        [ChildActionOnly]
         public ActionResult Footer(IPublishedContent currentPage)
         {
             var model = FooterBuilder.GetModel(currentPage);
@@ -69,6 +85,7 @@ namespace Kickoff.Controllers
             return PartialView("_Footer", model);
         }
 
+        [ChildActionOnly]
         public ActionResult HighlightBlock(IPublishedContent blockContent)
         {
             var model = HighlightBlockBuilder.GetModel(blockContent);
@@ -77,6 +94,17 @@ namespace Kickoff.Controllers
                 return null;
 
             return PartialView("_HighlightBlock", model);
+        }
+
+        [ChildActionOnly]
+        public ActionResult CTABlock(IPublishedContent blockContent)
+        {
+            var model = CTABlockBuilder.GetModel(blockContent);
+
+            if (model == null)
+                return null;
+
+            return PartialView("_CTABlock", model);
         }
     }
 }

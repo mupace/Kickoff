@@ -1,4 +1,4 @@
-﻿using Kickoff.Filters;
+﻿using Kickoff.ActionFilters;
 using Kickoff.Models.ContentModels;
 using Kickoff.Services.Definitions.Pages;
 using System.Web.Mvc;
@@ -18,7 +18,7 @@ namespace Kickoff.Controllers
 
         // GET: StandardPage
         [IsUnderMaintenanceActionFilter]
-        public ActionResult Index(ContentModel model)
+        public override ActionResult Index(ContentModel model)
         {
             var pageModel = new StandardPageContentModel(model.Content);
 

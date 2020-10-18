@@ -433,7 +433,6 @@
     <Content Include="App_Plugins\UmbracoForms\UmbracoForms.config" />
     <Content Include="package.json" />
     <None Include="packages.config" />
-    <Content Include="README.md" />
     <None Include="Scripts\jquery-1.8.0.intellisense.js" />
     <Content Include="Scripts\jquery-1.8.0.js" />
     <Content Include="Scripts\jquery-1.8.0.min.js" />
@@ -2409,6 +2408,7 @@
     <Content Include="Umbraco\Views\Preview\Index.cshtml" />
     <Content Include="Umbraco\Views\web.config" />
     <Content Include="Views\BasicPage.cshtml" />
+    <Content Include="Views\Block\_CTABlock.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -2442,12 +2442,13 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ActionFilters\HandleBlockErrorAttribute.cs" />
     <Compile Include="Composers\ContentEventHandlerComposer.cs" />
     <Compile Include="Composers\ServiceRegistrationComposer.cs" />
     <Compile Include="Controllers\BlockController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\StandardPageController.cs" />
-    <Compile Include="Filters\IsUnderMaintenanceActionFilter.cs" />
+    <Compile Include="ActionFilters\IsUnderMaintenanceActionFilter.cs" />
     <Compile Include="Models\ContentModels\HomeContentModel.cs" />
     <Compile Include="Models\ContentModels\StandardPageContentModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

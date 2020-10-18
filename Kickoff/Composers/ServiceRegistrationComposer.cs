@@ -20,6 +20,7 @@ namespace Kickoff.Composers
             composition.Register<ISiteFooterBuilder, SiteFooterBuilder>(Lifetime.Singleton);
             composition.Register<ISiteHeaderBuilder, SiteHeaderBuilder>(Lifetime.Singleton);
             composition.Register<IHighlightBlockBuilder, HighlightBlockBuilder>(Lifetime.Singleton);
+            composition.Register<ICTABlockBuilder, CTABlockBuilder>(Lifetime.Singleton);
 
             #endregion
 

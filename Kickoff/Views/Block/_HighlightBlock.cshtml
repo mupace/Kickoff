@@ -13,25 +13,29 @@
     <h3>@Model.Title</h3>
 
     @*Image Positioning and text*@
-    <div class="row">
-        @if (Model.HasImage)
+<div class="row">
+    @if (Model.HasImage)
+    {
+        if (Model.ImagePositionEnum == ImagePositionDropdown.Left)
         {
-            if (Model.ImagePositionEnum == ImagePositionDropdown.Left)
-            {
-                <div class="col-md-3 col-xs-12" style="height:100%">
-                    <img class="@imageCss" src="@Model.Image.Url" alt="@Model.Image.Alt" title="@Model.Image.Title" />
-                </div>
-            }
-
-            <div class="@textWidthCss">@Html.Raw(Model.Content)</div>
-
-            if (Model.ImagePositionEnum == ImagePositionDropdown.Right)
-            {
-                <div class="col-md-3 col-xs-12">
-                    <img class="@imageCss" src="@Model.Image.CropUrl" alt="@Model.Image.Alt" title="@Model.Image.Title" />
-                </div>
-            }
-
+            <div class="col-md-3 col-xs-12 text-center">
+                <img class="@imageCss" src="@Model.Image.CropUrl" alt="@Model.Image.Alt" title="@Model.Image.Title" />
+            </div>
         }
-    </div>
+
+        <div class="@textWidthCss">@Html.Raw(Model.Content)</div>
+
+        if (Model.ImagePositionEnum == ImagePositionDropdown.Right)
+        {
+            <div class="col-md-3 col-xs-12 text-center">
+                <img class="@imageCss" src="@Model.Image.CropUrl" alt="@Model.Image.Alt" title="@Model.Image.Title" />
+            </div>
+        }
+
+    }
+    else
+    {
+        <div class="@textWidthCss">@Html.Raw(Model.Content)</div>
+    }
+</div>
 </section>

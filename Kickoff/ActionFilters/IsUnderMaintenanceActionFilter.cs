@@ -5,7 +5,7 @@ using System.Web.Mvc;
 using Umbraco.Web;
 using Umbraco.Web.Models;
 
-namespace Kickoff.Filters
+namespace Kickoff.ActionFilters
 {
     public class IsUnderMaintenanceActionFilter : ActionFilterAttribute
     {
