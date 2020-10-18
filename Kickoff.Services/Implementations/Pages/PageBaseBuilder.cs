@@ -1,9 +1,6 @@
-﻿using Kickoff.Constants.Pages;
-using Kickoff.Models.Pages;
-using Kickoff.Services.Definitions.Media;
+﻿using Kickoff.Models.Pages;
 using Kickoff.Services.Definitions.Pages;
 using Umbraco.Core.Models.PublishedContent;
-using Umbraco.Web;
 
 namespace Kickoff.Services.Implementations.Pages
 {
@@ -15,7 +12,7 @@ namespace Kickoff.Services.Implementations.Pages
 
         protected readonly ISeoBaseBuilder _seoBaseBuilder;
 
-        #endregion
+        #endregion Fields
 
         public PageBaseBuilder(INavigationBuilder navigationBuilder, ISeoBaseBuilder seoBaseBuilder)
         {
@@ -32,7 +29,6 @@ namespace Kickoff.Services.Implementations.Pages
             model.SeoBase = _seoBaseBuilder.GetModel(content);
 
             return model;
-        } 
-
+        }
     }
 }
