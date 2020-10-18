@@ -15,8 +15,6 @@ However caching data is done in builders.
 I took leverage of 2 popular Umbraco addons (uSync and Umbraco Forms) for this project. uSync itself is not a functional addon, it is used for migration and version tracking for types.
 On the other hand Umbraco Forms is used for dynamic form creation and flow management. 
 
-Feel free to contact me on any questions via mehmet.tlk.avci@gmail.com
-
 You can use following info to gain access to backoffice (/umbraco is open)
 
 UserName: admin@sometempdomain.net
