@@ -42,6 +42,7 @@
   <ItemGroup>
     <Compile Include="Blocks\BlockDocTypes.cs" />
     <Compile Include="Blocks\BlockRoot.cs" />
+    <Compile Include="Blocks\CTABlock.cs" />
     <Compile Include="Blocks\HighlightBlock.cs" />
     <Compile Include="Blocks\SiteFooter.cs" />
     <Compile Include="Blocks\SiteHeader.cs" />

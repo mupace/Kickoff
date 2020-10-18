@@ -27,7 +27,7 @@ namespace Kickoff.Services
                 Name = link.Name,
                 LinkType = (int)link.Type,
                 Target = link.Target,
-                Udi = link.Udi.ToString(),
+                Udi = link.Udi?.ToString(),
                 Url = link.Url
             };
         }

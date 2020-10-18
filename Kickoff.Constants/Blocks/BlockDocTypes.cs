@@ -6,7 +6,7 @@ namespace Kickoff.Constants.Blocks
     {
         private static List<string> TypeList = new List<string>
         {
-            HighlightBlock.DocumentTypeAlias,
+            HighlightBlock.DocumentTypeAlias, CTABlock.DocumentTypeAlias
         };
 
         public static bool IncludesType(string typeAlias)

@@ -1,0 +1,30 @@
+﻿@inherits UmbracoViewPage<Kickoff.Models.Block.CTABlockModel>
+
+@{
+    var linkCssClass = Model.LinkInfoList.Count > 1 ? "col-md-6 col-xs-12" : "col-md-12 col-xs-12";
+}
+
+<section>
+    @if (!string.IsNullOrEmpty(Model.Title))
+    {
+        <div class="row">
+            <div class="col-md-4 col-xs-12"></div>
+            <div class="col-md-4 col-xs-12 align-items-center"><h3 class="text-center">@Model.Title</h3></div>
+            <div class="col-md-4 col-xs-12"></div>
+        </div>
+    }
+
+    @if (!string.IsNullOrEmpty(Model.Subtext))
+    {
+        <div class="row">
+            <div class="col-12 text-center">@Html.Raw(Model.Subtext)</div>
+        </div>
+    }
+
+    <div class="row">
+        @foreach (var linkItem in Model.LinkInfoList)
+        {
+            <div class="@linkCssClass text-center"><a target="@linkItem.Target" class="btn btn-dark btn-xl" role="button" href="@linkItem.Url">@linkItem.Name</a></div>
+        }
+    </div>
+</section>

@@ -237,6 +237,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BaseDocumentBuilder.cs" />
+    <Compile Include="Definitions\Blocks\ICTABlockBuilder.cs" />
     <Compile Include="Definitions\Blocks\IHighlightBlockBuilder.cs" />
     <Compile Include="Definitions\Blocks\ISiteFooterBuilder.cs" />
     <Compile Include="Definitions\Blocks\ISiteHeaderBuilder.cs" />
@@ -250,6 +251,7 @@
     <Compile Include="Definitions\Pages\ISeoBaseBuilder.cs" />
     <Compile Include="Definitions\Pages\IStandardPageBuilder.cs" />
     <Compile Include="Extensions.cs" />
+    <Compile Include="Implementations\Block\CTABlockBuilder.cs" />
     <Compile Include="Implementations\Block\HighlightBlockBuilder.cs" />
     <Compile Include="Implementations\Block\SiteFooterBuilder.cs" />
     <Compile Include="Implementations\Block\SiteHeaderBuilder.cs" />

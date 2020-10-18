@@ -44,6 +44,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BaseDocumentModel.cs" />
+    <Compile Include="Block\CTABlockModel.cs" />
     <Compile Include="Block\HighlightBlockModel.cs" />
     <Compile Include="Block\SiteFooterModel.cs" />
     <Compile Include="Block\SiteHeaderModel.cs" />
